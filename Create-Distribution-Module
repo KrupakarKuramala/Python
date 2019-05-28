@@ -1,0 +1,22 @@
+Create a folder -> copy .py file
+                -> Create setup.py ->
+                                        from distutilis.core import setup
+                                        setup(
+                                            name='nester',
+                                            version='1.0.0',
+                                            py_modules=['nester'], - associate your modules metadata with the setup functions arguments
+                                            author='krupakar',
+                                            author_email='krupakar.kuramala@gmail.com',
+                                            url='',
+                                            description='Python script to convert xml to csv',
+                                        )
+                    -> Build a distribution file -> Open cmd in the created folder,
+                          run this command : python setup.py sdist
+                    -> Install distribution into local copy of python 
+                          run this command : python setup.py install
+On completing these steps we created and installed the code in our local python modules.
+
+
+Cross verification  -> launch IDEL type 'import xml_to_csv' command, should not get any error successful install.
+                    -> run xml_to_csv.convert("C:\\Users\\L_408373\\Desktop\\sample.xml","./PurchaseOrder", "C:\\Users\\L_408373\\Desktop\\output.csv")
+                    -> csv file will be generated in the path provided.
